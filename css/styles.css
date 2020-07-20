@@ -1,0 +1,89 @@
+:root {
+  --grid-size: 600px;
+  --square-size: 0;
+  --number-of-squares: 16;
+  --color-of-square: black;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #5a192f 0%, #152752 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  padding: 2.5rem 0;
+}
+
+.setting-box {
+  max-width: var(--grid-size);
+}
+
+.grid-container {
+  max-width: var(--grid-size);
+  min-height: var(--grid-size);
+  height: auto;
+  overflow: hidden;
+  pointer-events: none;
+  margin: 2.5rem 0;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 0;
+  pointer-events: visible;
+  border: 0.02px solid lightgray;
+}
+
+.grid-square {
+  width: var(--square-size);
+  height: var(--square-size);
+  width: 100%;
+  height: 100%;
+  border: 0.02px solid lightgray;
+}
+
+button,
+.reset {
+  background-color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 400;
+  font-size: 2.3rem;
+  color: darkslategrey;
+}
+
+button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+label {
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+
+input[type='color'] {
+  width: 50px;
+}
