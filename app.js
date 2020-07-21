@@ -73,4 +73,6 @@ gridContainer.addEventListener('mouseover', e => {
   }
 });
 
+colorPicker.addEventListener('change', e => (isResetClicked = false));
+
 randomColorBtn.addEventListener('click', e => (isResetClicked = true));
